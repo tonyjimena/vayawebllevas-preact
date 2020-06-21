@@ -1,0 +1,174 @@
+
+@media screen and (min-width: 1500px) {
+    .footer1 {
+      clip-path: polygon(0 0, 0 100%, 70% 100%);
+      background: linear-gradient(10deg, #100e17 -10%, #a900ff);
+    }
+    .footer2 {
+      clip-path: polygon(135% -15%, -70% 185%, 120% 100%);
+      background: #100e174f;
+    }
+  }
+  @media screen and (max-width: 1370px) {
+    html {
+      font-size: 22px;
+    }
+  }
+  @media screen and (max-width: 1500px) {
+    section#disenos {
+      min-height: 1000px;
+    }
+    .foot-wrap {
+      padding: 0;
+      width: 100%;
+    }
+    .footer1,
+    .footer2 {
+      width: 50%;
+      background: 0 0;
+      position: static;
+      padding: 2rem;
+    }
+    footer {
+      background: linear-gradient(0deg, #100e174f 25%, transparent);
+    }
+    .foot-wrap2 {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .webpop.blog {
+      background-image: url(https://vayawebllevas.com/dev/vayavaya/img/web-modelo-blog.jpg);
+    }
+    .webpop.comercial {
+      background-image: url(https://vayawebllevas.com/dev/vayavaya/img/web-modelo-cafeteria.jpg);
+    }
+    .webpop.corporativa {
+      background-image: url(https://vayawebllevas.com/dev/vayavaya/img/web-modelo-oficina.jpg);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    html {
+      font-size: 18px;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      text-indent: initial;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+      width: 100%;
+    }
+    .webpop {
+      width: 100%;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      background-color: #100e17;
+    }
+    .webpop .butt.butt-main {
+      max-width: unset;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    section#disenos {
+      height: auto;
+      min-height: unset;
+      padding: 4rem 1rem;
+    }
+    header.wrappa {
+      padding: 1rem;
+    }
+    section#hola span {
+      font-size: 0.8rem;
+      display: inline;
+    }
+    section#disenos .cards .card {
+      width: 100%;
+      margin: 1rem 0;
+      height: 300px;
+      background-position-y: center;
+      background-color: rgba(0, 0, 0, 0.25) !important;
+    }
+    .cta-vamonos {
+      justify-content: space-between;
+    }
+    .cta-vamonos a.butt {
+      width: calc(50% - 0.5rem);
+      margin: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 13px;
+      display: block;
+    }
+    header.wrappa .butt-main {
+      margin: 0;
+      white-space: normal;
+      text-align: center;
+      line-height: 1.2;
+      padding: 10px;
+      font-size: 18px;
+      display: none;
+    }
+    section#hola {
+      padding: 1rem;
+    }
+    section#disenos .cards .card p.card-desc,
+    section#disenos .cards .card:hover p.card-desc {
+      height: auto;
+      padding: 0 3rem 0.75rem 1rem;
+      opacity: 1;
+      font-size: 0.75rem;
+    }
+    section#disenos .cards .card span.card-web {
+      line-height: 1.5;
+    }
+    section#disenos .cards .card h3 {
+      padding: 0.75rem 1rem 0.25rem;
+    }
+    section#disenos .cards .card h3:before {
+      left: 0;
+    }
+    .eeehhh {
+      background: #100e17;
+    }
+    section#disenos .cards .card .card-icon {
+      right: 10px;
+      opacity: 1;
+    }
+    footer {
+      flex-wrap: wrap;
+      height: auto;
+      align-items: flex-end;
+    }
+    .footer1,
+    .footer2 {
+      width: 100%;
+      padding: 2rem;
+    }
+    .social {
+      display: none;
+    }
+    .footer2 {
+      background: linear-gradient(0deg, #fc0069 -100%, transparent);
+      padding: 1.25rem 0;
+    }
+    .footer2 .foot-text {
+      margin: 0;
+      text-align: center;
+    }
+    .footer2 .foot-text br {
+      display: none;
+    }
+    .footer2 .foot-text p {
+      margin-bottom: 5px;
+    }
+    .logo-footer {
+      margin-left: -6px;
+    }
+  }
+  

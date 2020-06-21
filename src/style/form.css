@@ -1,0 +1,99 @@
+form {
+    margin: 1rem auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    justify-content: space-between;
+  }
+  form > div {
+    position: relative;
+    width: 49%;
+    border-bottom: 1px solid #fff;
+    margin: 5px 0;
+  }
+  form > div.mail,
+  form > div.mensajito {
+      width: 100%;
+  }
+  form > div.mensajito{
+    border: 0;
+  }
+  form > div.mensajito > label {
+      top: 30px;
+  }
+  form > div > label {
+    opacity: 0.3;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    cursor: text;
+  }
+  form input[type="submit"].butt {
+    width: 100%;
+    margin: 0.5rem 0 0;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  form > div > textarea[type="text"]{
+    min-height: 150px;
+    width: 100% !important;
+    max-height: 400px;
+    font-family: inherit;
+    border-bottom: 1px solid #ccc !important;
+  }
+  form > div > input:focus,
+  form > div > textarea:focus{
+    background: rgba(0,0,0,0.2)
+  }
+  form > div > input,
+  form > div > textarea[type="text"] {
+    width: 100%;
+    border: 0;
+    padding: 20px;
+    background: rgba(0,0,0,0.1);
+    outline: 0 !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 0.7rem;
+    line-height: 1;
+    color: #fff;
+    transition: background .1s linear;
+  }
+  form > div > input:invalid:not(:focus):not(:placeholder-shown),
+  form > div > textarea[type="text"]:invalid:not(:focus):not(:placeholder-shown){
+    background: #6f0000b3;
+  }
+  form > div > input:focus + label,
+  form > div > textarea[type="text"]:focus + label{
+    opacity: 0;
+  }
+  form > div > input:valid + label,
+  form > div > textarea[type="text"]:valid + label{
+    opacity: 0;
+  }
+  form > div > input:invalid:not(:focus):not(:placeholder-shown) + label,
+  form > div > textarea[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label
+  {
+    opacity: 0;
+  }
+  form > div > input[type="text"]:invalid:focus:not(:placeholder-shown) ~ .requirements,
+  form > div > textarea[type="text"]:invalid:focus:not(:placeholder-shown) ~ .requirements
+  {
+    max-height: 200px;
+    padding: 0 30px 20px 50px;
+  }
+  
+  /* Alertas */
+  p.form-alert {
+      display: none;
+      width: 100%;
+      text-align: center;
+      font-size: 0.75rem;
+  }
+  p.form-alert.success.sent-form {
+      color: #1fff1f;
+  }
+  p.form-alert.error.error-form {
+      color: #ff0000;
+  }
