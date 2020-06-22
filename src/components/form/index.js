@@ -1,16 +1,29 @@
 import { h } from "preact";
-
+import useFormHook  from "../../hooks/customHooks";
 export default function Formulario() {
+ 
+  const { inputs, handleInputChange, handleSubmit } = useFormHook();
+
   return (
-    <form action="/dev/vayavaya/form.php" method="POST" id="form">
+    <form onSubmit={handleSubmit} method="POST" id="form">
       <div>
-        <input type='text' id="nombre" name="nombre" required placeholder=" " />
+        <input
+          onChange={handleInputChange}
+          value={inputs.nombre}
+          type="text"
+          id="nombre"
+          name="nombre"
+          required
+          placeholder=" "
+        />
         <label for="nombre">Nombre</label>
       </div>
 
       <div>
         <input
-          type='text'
+          onChange={handleInputChange}
+          value={inputs.telefono}
+          type="text"
           id="telefono"
           name="telefono"
           required
@@ -21,12 +34,22 @@ export default function Formulario() {
       </div>
 
       <div class="mail">
-        <input type="email" id="email" name="email" required placeholder=" " />
+        <input
+          onChange={handleInputChange}
+          value={inputs.email}
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder=" "
+        />
         <label for="email">Email</label>
       </div>
 
       <div class="mensajito">
         <textarea
+          onChange={handleInputChange}
+          value={inputs.mensaje}
           type="text"
           id="mensaje"
           name="mensaje"
@@ -36,7 +59,7 @@ export default function Formulario() {
         <label for="mensaje">Cuéntanos tu proyecto</label>
       </div>
       <input type="submit" value="Enviar" class="butt butt-main butt-form" />
-      <p class="form-alert success">
+      {/* <p class="form-alert success">
         ¡Mensaje enviado!
         <br />
         Nos pondremos en contacto contigo lo antes posible.
@@ -45,7 +68,7 @@ export default function Formulario() {
         Error al enviar.
         <br />
         Inténtalo de nuevo, por favor.
-      </p>
+      </p> */}
     </form>
   );
 }

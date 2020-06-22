@@ -236,8 +236,8 @@ header.wrappa:after {
 }
 header.wrappa .butt-main {
   z-index: 1;
-  transform: translateX(calc(100% + 2rem));
-  opacity: 0;
+  /*transform: translateX(calc(100% + 2rem));*/
+  /*opacity: 0;*/
   font-weight: 500;
   width: auto;
   max-width: 60%;
