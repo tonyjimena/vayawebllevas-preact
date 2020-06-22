@@ -1,4 +1,4 @@
-import { h, Component } from "preact/";
+import { h, Component } from "preact/compat";
 
 const encode = (data) => {
   return Object.keys(data)
