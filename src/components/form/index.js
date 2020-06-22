@@ -34,12 +34,12 @@ export default class Formulario extends React.Component {
       <form
         onSubmit={this.handleSubmit}
         id="form"
-        name="contact"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
+        // name="contact"
+        // method="post"
+        // data-netlify="true"
+        // data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="contact" />
+        {/* <input type="hidden" name="form-name" value="contact" /> */}
 
         <div>
           <input
