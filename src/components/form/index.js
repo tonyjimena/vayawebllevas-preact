@@ -9,7 +9,13 @@ const encode = (data) => {
 export default class Formulario extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { nombre: "", email: "", telefono: "", mensaje: "" };
+    this.state = {
+      nombre: "",
+      email: "",
+      telefono: "",
+      mensaje: "",
+      success: "",
+    };
   }
 
   /* Here’s the juicy bit for posting the form submission */
@@ -20,8 +26,11 @@ export default class Formulario extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state }),
     })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
+      .then(() => this.setState({ success: true }))
+      .catch((error) => {
+        this.setState({ success: false });
+        console.log(error);
+      });
 
     e.preventDefault();
   };
@@ -29,7 +38,8 @@ export default class Formulario extends React.Component {
   handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { nombre, telefono, email, mensaje } = this.state;
+    const { nombre, telefono, email, mensaje, success } = this.state;
+
     return (
       <form
         onSubmit={this.handleSubmit}
@@ -94,31 +104,31 @@ export default class Formulario extends React.Component {
           <label for="mensaje">Cuéntanos tu proyecto</label>
         </div>
         <input type="submit" value="Enviar" class="butt butt-main butt-form" />
-
-        {/* <p>
-          <label>
-            Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea name="message" value={message} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p> */}
+        {success == true ? (
+          <>
+            <p class="form-alert success">
+              ¡Mensaje enviado!
+              <br />
+              Nos pondremos en contacto contigo lo antes posible.
+            </p>
+          </>
+        ) : (
+          ""
+        )}
+        {success == false ? (
+          <p class="form-alert error">
+            Error al enviar.
+            <br />
+            Inténtalo de nuevo, por favor.
+          </p>
+        ) : (
+          ""
+        )}
       </form>
     );
   }
 }
 
-//ReactDOM.render(<ContactForm />, document.getElementById("root"));
 //import { useFormNetlify } from "../../hooks/customHooks";
 // export default function Formulario() {
 //   //const { inputs, handleInputChange, handleSubmit } = useFormHook();
