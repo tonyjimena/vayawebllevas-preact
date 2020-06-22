@@ -31,7 +31,16 @@ export default class Formulario extends Component {
   render() {
     const { nombre, telefono, email, mensaje } = this.state;
     return (
-      <form onSubmit={this.handleSubmit} id="form">
+      <form
+        onSubmit={this.handleSubmit}
+        id="form"
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+
         <div>
           <input
             onChange={this.handleChange}
