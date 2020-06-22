@@ -1,5 +1,5 @@
 import { h } from "preact";
-import { useState } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
 import sendForm from "../services/sendForm";
 
 const useFormHook = (callback) => {
@@ -25,13 +25,13 @@ const useFormHook = (callback) => {
   };
 };
 
-const useFormNetlify = (callback) => {
+const useFormNetlify = () => {
   /* Here’s the juicy bit for posting the form submission */
   const [state, setState] = useState({});
 
   const encode = (data) => {
     return Object.keys(data)
-        .map(key => `${encodeURIComponent(key)  }=${  encodeURIComponent(data[key])}`)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
   }
 
@@ -41,7 +41,7 @@ const useFormNetlify = (callback) => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...state }),
     })
-      .then(() => alert("Success!"))
+      .then(() => console.log(state))
       .catch((error) => alert(error));
 
     e.preventDefault();
@@ -61,5 +61,30 @@ const useFormNetlify = (callback) => {
     state,
   };
 };
+/*
+const useDarkMode = () => {
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    if (theme !== "dark") {
+      localStorage.setItem("theme", "dark");
+      setTheme("dark");
+    } else {
+      localStorage.setItem("theme", "light");
+      setTheme("light");
+    }
+  };
 
-export {useFormHook, useFormNetlify};
+  useEffect(() => {
+    const localTheme = localStorage.getItem("theme");
+    if (localTheme) {
+      setTheme(localTheme);
+    }
+  }, []);
+
+  return {
+    theme,
+    toggleTheme,
+  };
+};*/
+
+export { useFormHook, useFormNetlify };

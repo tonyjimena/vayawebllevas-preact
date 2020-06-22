@@ -11,6 +11,8 @@ export default function Formulario() {
 
   return (
     <form onSubmit={handleSubmit} method="POST" id="form">
+      <input type="hidden" name="form-name" value="contact" />
+
       <div>
         <input
           onChange={handleChange}
