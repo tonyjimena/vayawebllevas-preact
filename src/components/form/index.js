@@ -30,7 +30,6 @@ export default class Formulario extends React.Component {
 
   render() {
     const { nombre, telefono, email, mensaje } = this.state;
-    
     return (
       <form
         onSubmit={this.handleSubmit}
@@ -95,7 +94,7 @@ export default class Formulario extends React.Component {
           <label for="mensaje">Cuéntanos tu proyecto</label>
         </div>
         <input type="submit" value="Enviar" class="butt butt-main butt-form" />
-        
+
       </form>
     );
   }
