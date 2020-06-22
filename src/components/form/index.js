@@ -1,15 +1,16 @@
 import { h } from "preact";
-import useFormHook  from "../../hooks/customHooks";
+import { useFormNetlify }  from "../../hooks/customHooks";
 export default function Formulario() {
  
-  const { inputs, handleInputChange, handleSubmit } = useFormHook();
+  //const { inputs, handleInputChange, handleSubmit } = useFormHook();
+  const { state, handleChange, handleSubmit } = useFormNetlify();
 
   return (
     <form onSubmit={handleSubmit} method="POST" id="form">
       <div>
         <input
-          onChange={handleInputChange}
-          value={inputs.nombre}
+          onChange={handleChange}
+          value={state.nombre}
           type="text"
           id="nombre"
           name="nombre"
@@ -21,8 +22,8 @@ export default function Formulario() {
 
       <div>
         <input
-          onChange={handleInputChange}
-          value={inputs.telefono}
+          onChange={handleChange}
+          value={state.telefono}
           type="text"
           id="telefono"
           name="telefono"
@@ -35,8 +36,8 @@ export default function Formulario() {
 
       <div class="mail">
         <input
-          onChange={handleInputChange}
-          value={inputs.email}
+          onChange={handleChange}
+          value={state.email}
           type="email"
           id="email"
           name="email"
@@ -48,8 +49,8 @@ export default function Formulario() {
 
       <div class="mensajito">
         <textarea
-          onChange={handleInputChange}
-          value={inputs.mensaje}
+          onChange={handleChange}
+          value={state.mensaje}
           type="text"
           id="mensaje"
           name="mensaje"
