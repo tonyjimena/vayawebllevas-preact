@@ -9,13 +9,7 @@ const encode = (data) => {
 export default class Formulario extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      nombre: "",
-      email: "",
-      telefono: "",
-      mensaje: "",
-      success: "",
-    };
+    this.state = { nombre: "", email: "", telefono: "", mensaje: "" };
   }
 
   /* Here’s the juicy bit for posting the form submission */
@@ -26,11 +20,8 @@ export default class Formulario extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state }),
     })
-      .then(() => this.setState({ success: true }))
-      .catch((error) => {
-        this.setState({ success: false });
-        console.log(error);
-      });
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
 
     e.preventDefault();
   };
@@ -38,8 +29,8 @@ export default class Formulario extends React.Component {
   handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { nombre, telefono, email, mensaje, success } = this.state;
-
+    const { nombre, telefono, email, mensaje } = this.state;
+    
     return (
       <form
         onSubmit={this.handleSubmit}
@@ -104,26 +95,7 @@ export default class Formulario extends React.Component {
           <label for="mensaje">Cuéntanos tu proyecto</label>
         </div>
         <input type="submit" value="Enviar" class="butt butt-main butt-form" />
-        {success == true ? (
-          <>
-            <p class="form-alert success">
-              ¡Mensaje enviado!
-              <br />
-              Nos pondremos en contacto contigo lo antes posible.
-            </p>
-          </>
-        ) : (
-          ""
-        )}
-        {success == false ? (
-          <p class="form-alert error">
-            Error al enviar.
-            <br />
-            Inténtalo de nuevo, por favor.
-          </p>
-        ) : (
-          ""
-        )}
+        
       </form>
     );
   }
