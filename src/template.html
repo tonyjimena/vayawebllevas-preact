@@ -35,9 +35,9 @@
     <!-- A little help for the Netlify post-processing bots -->
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
       <input type="text" name="nombre" />
-      <input type="text" name="telefono" />
+      <input type="number" name="telefono" />
       <input type="email" name="email" />
-      <textarea type="text" name="mensaje"></textarea>
+      <textarea name="mensaje"></textarea>
     </form>
 
     <% preact.bodyEnd %>

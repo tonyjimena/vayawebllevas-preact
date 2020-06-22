@@ -1,9 +1,13 @@
 import { h } from "preact";
-import { useFormNetlify }  from "../../hooks/customHooks";
+import { useFormNetlify } from "../../hooks/customHooks";
 export default function Formulario() {
- 
   //const { inputs, handleInputChange, handleSubmit } = useFormHook();
-  const { state, handleChange, handleSubmit } = useFormNetlify();
+  const { state, handleChange, handleSubmit } = useFormNetlify({
+    nombre: "",
+    email: "",
+    telefono: "",
+    mensaje: "",
+  });
 
   return (
     <form onSubmit={handleSubmit} method="POST" id="form">
