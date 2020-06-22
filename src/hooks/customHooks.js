@@ -7,7 +7,7 @@ const useFormHook = (callback) => {
   const handleSubmit = (event) => {
     if (event) {
       event.preventDefault();
-      console.log(inputs);
+      //console.log(inputs);
       sendForm(inputs);
     }
   };
@@ -27,7 +27,7 @@ const useFormHook = (callback) => {
 
 const useFormNetlify = (callback) => {
   /* Here’s the juicy bit for posting the form submission */
-  const [state, setState] = useState();
+  const [state, setState] = useState({});
 
   const encode = (data) => {
     return Object.keys(data)
@@ -47,7 +47,14 @@ const useFormNetlify = (callback) => {
     e.preventDefault();
   };
 
-  const handleChange = (e) => setState({ [e.target.name]: e.target.value });
+  //const handleChange = (e) => setState({ [e.target.name]: e.target.value });
+  const handleChange = (event) => {
+    //event.persist();
+    setState((state) => ({
+      ...state,
+      [event.target.name]: event.target.value,
+    }));
+  };
   return {
     handleSubmit,
     handleChange,
