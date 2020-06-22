@@ -1,4 +1,4 @@
-import { h, Component } from "preact/compat";
+import React from "preact/compat";
 
 const encode = (data) => {
   return Object.keys(data)
@@ -6,7 +6,7 @@ const encode = (data) => {
     .join("&");
 };
 
-export default class Formulario extends Component {
+export default class Formulario extends React.Component {
   constructor(props) {
     super(props);
     this.state = { nombre: "", email: "", telefono: "", mensaje: "" };
