@@ -86,14 +86,14 @@ form {
   
   /* Alertas */
   p.form-alert {
-      display: none;
       width: 100%;
       text-align: center;
       font-size: 0.75rem;
+      margin-top: 15px;
   }
-  p.form-alert.success.sent-form {
+  p.form-alert.success {
       color: #1fff1f;
   }
-  p.form-alert.error.error-form {
+  p.form-alert.error {
       color: #ff0000;
   }

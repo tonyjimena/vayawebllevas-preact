@@ -28,17 +28,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap"
       rel="stylesheet"
     />
-    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LcmcaUZAAAAAJ0QonxcuozY_sjAGlNQDaeY8qQI"></script> -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcmcaUZAAAAAJ0QonxcuozY_sjAGlNQDaeY8qQI" async defer></script>
     <% preact.headEnd %>
   </head>
   <body>
-    <!-- A little help for the Netlify post-processing bots -->
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden style="position: absolute; opacity: 0;">
-      <input type="text" name="nombre" />
-      <input type="tel" name="telefono" />
-      <input type="email" name="email" />
-      <textarea name="mensaje"></textarea>
-    </form>
 
     <% preact.bodyEnd %>
   </body>

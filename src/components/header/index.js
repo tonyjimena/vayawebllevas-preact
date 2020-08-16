@@ -35,7 +35,7 @@ export default function Header() {
         <vayavaya class="logo">
           <img
             alt="¡Qué ha pachado!"
-            src="../../assets/img/xdddd.png"
+            src="./assets/img/xdddd.png"
             class="logo-vwl"
             height="88"
             width="200"

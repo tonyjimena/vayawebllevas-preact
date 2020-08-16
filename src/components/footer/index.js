@@ -9,7 +9,7 @@ export default function Footer() {
           <div class="logo-footer">
             <img
               alt="¡Qué ha pachado!"
-              src="../../assets/img/xdddd.png"
+              src="./assets/img/xdddd.png"
               class="logo-vwl"
               height="88"
               width="200"
@@ -69,7 +69,7 @@ export default function Footer() {
               <img
                 alt="¡Contacta por whatsapp!"
                 title="Contacta por WhatsApp"
-                src="../../assets/img/whatsapp-vaya-web-llevas.png"
+                src="./assets/img/whatsapp-vaya-web-llevas.png"
                 class="wh-vwl"
                 height="75"
                 width="75"
@@ -79,7 +79,7 @@ export default function Footer() {
               <img
                 alt="¡Contacta por teléfono!"
                 title="Contacta por Teléfono"
-                src="../../assets/img/telefono-vaya-web-llevas.png"
+                src="./assets/img/telefono-vaya-web-llevas.png"
                 class="wh-vwl"
                 height="75"
                 width="75"
@@ -93,7 +93,7 @@ export default function Footer() {
               <img
                 alt="¡Contacta por correo!"
                 title="Contacta por Correo Electrónico"
-                src="../../assets/img/correo-vaya-web-llevas.png"
+                src="./assets/img/correo-vaya-web-llevas.png"
                 class="wh-vwl"
                 height="75"
                 width="75"
