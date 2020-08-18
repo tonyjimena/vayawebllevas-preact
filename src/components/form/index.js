@@ -1,9 +1,9 @@
 import { h } from "preact";
 import { useState } from "preact/hooks";
-import {
-  GoogleReCaptchaProvider,
-  GoogleReCaptcha,
-} from "react-google-recaptcha-v3";
+// import {
+//   GoogleReCaptchaProvider,
+//   GoogleReCaptcha,
+// } from "react-google-recaptcha-v3";
 
 const encode = (data) => {
   return Object.keys(data)
@@ -19,7 +19,7 @@ export default function Formulario() {
     mensaje: "",
   });
   const [success, setSuccess] = useState(null);
-  const [token, setToken] = useState("");
+  // const [token, setToken] = useState("");
 
   const renderComponent = () => {
     switch (success) {
@@ -66,7 +66,7 @@ export default function Formulario() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "contact",
-        "g-recaptcha-response": token,
+        // "g-recaptcha-response": token,
         ...state,
       }),
     })
@@ -138,9 +138,9 @@ export default function Formulario() {
       </div>
       <input type="submit" value="Enviar" class="butt butt-main butt-form" />
       {renderComponent()}
-      <GoogleReCaptchaProvider reCaptchaKey="6LcmcaUZAAAAAJ0QonxcuozY_sjAGlNQDaeY8qQI">
+      {/* <GoogleReCaptchaProvider reCaptchaKey="6LcmcaUZAAAAAJ0QonxcuozY_sjAGlNQDaeY8qQI">
         <GoogleReCaptcha onVerify={(token) => setToken(token)} />
-      </GoogleReCaptchaProvider>
+      </GoogleReCaptchaProvider> */}
     </form>
   );
 }

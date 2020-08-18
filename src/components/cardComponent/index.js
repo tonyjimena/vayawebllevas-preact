@@ -1,13 +1,13 @@
 import { h } from "preact";
 import { useState } from "preact/hooks";
 import CardDetails from "../cardDetails";
+import {capitalize} from '../../helpers/';
 
 export default function CardComponent({
   tipo,
   info,
   details,
   onhandleClick,
-  //show,
 }) {
   const [showDetails, setShowDetails] = useState(false);
   const handleClick = () => {
@@ -22,13 +22,13 @@ export default function CardComponent({
           <h3>
             <span class="card-quiero">Quiero una web</span>
             <br />
-            <span class="card-web">{tipo}</span>
+            <span class="card-web">{capitalize(tipo)}</span>
             <i class="material-icons card-icon">keyboard_arrow_right</i>
           </h3>
           <p class="card-desc">{info}</p>
         </div>
       </div>
-      {showDetails ? <CardDetails onhandleClick={handleClick}tipo={tipo} details={details} /> : ""}
+      {showDetails ? <CardDetails onhandleClick={handleClick} tipo={tipo} details={details} /> : ""}
     </>
   );
 }

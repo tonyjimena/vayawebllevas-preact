@@ -2,41 +2,41 @@
 /* KEYFRAMES */
 
 .fadeOutDown {
-    -webkit-animation: fadeOutDown 1s;
+    -webkit-animation: fadeOutDown 0.5s;
     -webkit-animation-name: fadeOutDown;
     animation-name: fadeOutDown;
 }
 .fadeInUp {
-    -webkit-animation: fadeInUp 1s;
+    -webkit-animation: fadeInUp 0.5s;
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
 }
 .fadeInDown {
-    -webkit-animation: fadeInDown 1s;
+    -webkit-animation: fadeInDown 0.5s;
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
 }
 .heartBeat {
     -webkit-animation-name: heartBeat;
     animation-name: heartBeat;
-    -webkit-animation-duration: 1.3s;
-    animation-duration: 1.3s;
+    -webkit-animation-duration:  0.5s;
+    animation-duration:  0.5s;
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
 }
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
-    -webkit-animation-duration: .7s;
-    animation-duration: .7s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
 }
 .fadeOut {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
-    -webkit-animation-duration: .7s;
-    animation-duration: .7s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
 }

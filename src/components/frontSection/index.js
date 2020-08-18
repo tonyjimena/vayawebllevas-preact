@@ -7,9 +7,9 @@ export default function FrontSection () {
 					<h1>Renuévate</h1>
 					<span
 						>Tu <strong>nueva web</strong> más barata de lo que piensas,
-						<strong>y más fácil</strong>.</span
-					>
-					<span>No queremos complicar las cosas.</span>
+						<strong> y más fácil</strong>. 
+					</span>
+					<span> No queremos complicar las cosas.</span>
 					<div class="cta-vamonos">
 						<a href="#anchor-fix" class="butt butt-main">Echa un vistazo</a>
 						<a href="#dimealgo" class="butt butt-sec">Pide presupuesto</a>

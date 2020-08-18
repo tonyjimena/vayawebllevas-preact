@@ -1,6 +1,5 @@
 import { h } from "preact";
 import { useState, useLayoutEffect } from "preact/hooks";
-//import style from './style.css';
 
 export default function Header() {
   const [position, setPosition] = useState();
@@ -13,18 +12,17 @@ export default function Header() {
 
   useLayoutEffect(() => {
     window.addEventListener("scroll", updatePosition);
-    //updatePosition();
 
     if (position > 500) {
       fade == "fadeOut" ? setFade("fadeIn") : "";
       setTimeout(() => {
         setShow(true);
-      }, 500);
+      }, 450);
     } else {
       fade == "fadeIn" ? setFade("fadeOut") : "";
       setTimeout(() => {
         setShow(false);
-      }, 500);
+      }, 450);
     }
     //console.log(position)
   }, [position, show, fade]);
@@ -35,7 +33,7 @@ export default function Header() {
         <vayavaya class="logo">
           <img
             alt="¡Qué ha pachado!"
-            src="./assets/img/xdddd.png"
+            src="./assets/img-compress/xdddd.png"
             class="logo-vwl"
             height="88"
             width="200"
