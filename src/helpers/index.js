@@ -19,4 +19,10 @@ function getCookie(cname) {
   return "";
 }
 
-export { capitalize, setCookie, getCookie };
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
+export { capitalize, setCookie, getCookie, encode };

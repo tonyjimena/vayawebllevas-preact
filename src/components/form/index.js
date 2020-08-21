@@ -1,15 +1,10 @@
 import { h } from "preact";
 import { useState } from "preact/hooks";
+import { encode } from "../../helpers";
 // import {
 //   GoogleReCaptchaProvider,
 //   GoogleReCaptcha,
 // } from "react-google-recaptcha-v3";
-
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
 
 export default function Formulario() {
   const [state, setState] = useState({
@@ -47,20 +42,6 @@ export default function Formulario() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // grecaptcha.ready(function () {
-    //   grecaptcha
-    //     .execute('6LcmcaUZAAAAAJ0QonxcuozY_sjAGlNQDaeY8qQI', {
-    //       action: 'submit',
-    //     })
-    //     .then(function (token) {
-    //       // Add your logic to submit to your backend server here.
-    //       //console.log(token)
-    //       $('form').prepend(
-    //         '<input type="hidden" name="g-recaptcha-response" value="' +
-    //           token +
-    //           '">'
-    //       )
-    //     }).then(() => {
     fetch("https://vayawebllevas.com/dev/vayavaya/form.php", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -79,7 +60,10 @@ export default function Formulario() {
           setSuccess(false);
         }
       })
-      .catch((error) => console.error("Error:", error));
+      .catch((error) => {
+        console.error("Error:", error);
+        setSuccess(false);
+      });
   };
 
   const handleChange = (e) =>
