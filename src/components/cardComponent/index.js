@@ -9,10 +9,10 @@ export default function CardComponent({ tipo, info, details, onhandleClick }) {
     setShowDetails(!showDetails);
     onhandleClick();
   };
-
+  //console.log(tipo.split(' ')[0])
   return (
     <>
-      <div onClick={handleClick} class={`card card-${tipo}`}>
+      <div onClick={handleClick} class={`card card-${tipo.split(' ')[0]}`}>
         <div class="eeehhh">
           <h3>
             <span class="card-quiero">
